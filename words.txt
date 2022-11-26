@@ -1,0 +1,15 @@
+# words list for vscode spellchecker https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
+Amiri
+arti
+ayat
+deskripsi
+equran
+figtree
+jumlah_ayat
+nomor
+sebelumnya
+selanjutnya
+sveltejs
+sveltekit
+tempat_turun
+unocss
