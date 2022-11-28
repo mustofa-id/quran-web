@@ -6,8 +6,8 @@
 	export let description = undefined
 
 	// todo: move to config/env
-	const app_name = 'eQuran Web'
-	const app_desc = `eQuran Web adalah aplikasi al-Quran berbasis web menggunakan eQuran API`
+	const app_name = 'Quran'
+	const app_desc = `Aplikasi al-Quran berbasis web`
 </script>
 
 <svelte:head>
