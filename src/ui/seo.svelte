@@ -12,6 +12,6 @@
 
 <svelte:head>
 	<title>{title ? `${title} - ${app_name}` : app_name}</title>
-	<meta name="description" content={description ?? app_desc} />
+	<meta name="description" content={description?.replace(/<[^>]+>/g, '') ?? app_desc} />
 	<!-- todo: seo -->
 </svelte:head>
