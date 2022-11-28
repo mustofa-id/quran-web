@@ -10,18 +10,19 @@ async function api(path) {
 		// todo: find out if the server supports `cache-control`
 		const url = new URL(`api/${path}`, `https://equran.id`)
 		const response = await fetch(url)
-		if (response.ok) {
-			return response.json()
+		const json = await response.json()
+		if (!response.ok) {
+			throw error(response.status, json?.message)
 		}
-		throw new Error(`Cannot fetch equran.id api`)
+		return json
 	} catch (/** @type {any} */ e) {
-		throw error(500, e?.message ?? 'Server error')
+		throw error(e.status ?? 500, e.body ?? 'Server error')
 	}
 }
 
 /** @returns {Promise<Surah[]>} */
 export function find_all_surah() {
-	return api('/surat')
+	return api('surat')
 }
 
 /**
@@ -29,5 +30,9 @@ export function find_all_surah() {
  * @returns {Promise<SurahDetail>}
  */
 export function find_surah(number) {
+	// surah number will only between 1 and 114
+	if (number < 1 || number > 114) {
+		throw error(400, `Nomor surat tidak valid. Al-Quran terdiri dari 144 surat.`)
+	}
 	return api(`surat/${number}`)
 }
