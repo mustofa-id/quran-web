@@ -22,7 +22,7 @@ async function api(path) {
 
 /** @returns {Promise<Surah[]>} */
 export function find_all_surah() {
-	return api('/surat')
+	return api('surat')
 }
 
 /**
