@@ -7,6 +7,7 @@ equran
 figtree
 jumlah_ayat
 nomor
+persistable
 sebelumnya
 selanjutnya
 sveltejs
