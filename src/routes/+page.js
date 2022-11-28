@@ -15,6 +15,9 @@ export async function load({ url, data }) {
  */
 function filter_predicate(search) {
 	return (surah) => {
-		return surah.nomor === +search || surah.nama_latin.includes(search)
+		return (
+			surah.nomor === +search ||
+			surah.nama_latin.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+		)
 	}
 }
