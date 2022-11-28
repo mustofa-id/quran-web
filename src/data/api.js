@@ -29,5 +29,9 @@ export function find_all_surah() {
  * @returns {Promise<SurahDetail>}
  */
 export function find_surah(number) {
+	// surah number will only between 1 and 114
+	if (number < 1 || number > 114) {
+		throw error(400, `Nomor surat tidak valid. Al-Quran terdiri dari 144 surat.`)
+	}
 	return api(`surat/${number}`)
 }
