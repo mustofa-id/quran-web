@@ -3,7 +3,7 @@
 	export let surah
 </script>
 
-<a class="border rounded p-4 m-2 hover:(bg-neutral-100 dark:bg-neutral-900)" href="/{surah.nomor}">
+<a class="border rounded p-4 hover:(bg-neutral-100 dark:bg-neutral-900)" href="/{surah.nomor}">
 	<h1 class="text-xl">
 		<div class="icon-menu-book-outline text-emerald-700 dark:text-emerald-400" />
 		<span>{surah.nama_latin}</span> &bullet;

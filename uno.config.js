@@ -4,6 +4,7 @@ import {
 	presetIcons,
 	presetUno,
 	presetWebFonts,
+	transformerDirectives,
 	transformerVariantGroup
 } from 'unocss'
 
@@ -25,6 +26,6 @@ export default defineConfig({
 			}
 		})
 	],
-	transformers: [transformerVariantGroup()],
+	transformers: [transformerVariantGroup(), transformerDirectives()],
 	shortcuts: [[/^icon-(.*)$/, ([, c]) => `i-material-symbols-${c}`]]
 })
