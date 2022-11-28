@@ -10,7 +10,7 @@
 <Seo />
 
 <article class="sm:max-w-3xl xl:max-w-6xl mx-auto my-4">
-	<section class="sticky top-2 m-2 z-1">
+	<section class="sticky top-2 z-1 m-2">
 		<form
 			on:submit|preventDefault={async (e) => {
 				// TODO: remove this submit handler when https://github.com/sveltejs/kit/issues/7251 got fixed
@@ -42,7 +42,7 @@
 		</form>
 	</section>
 
-	<section class="grid sm:grid-cols-2 xl:grid-cols-3">
+	<section class="grid gap-2 sm:grid-cols-2 xl:grid-cols-3 mx-2">
 		{#each data.all_surah as surah (surah)}
 			<SurahItem {surah} />
 		{:else}
