@@ -27,5 +27,12 @@ export default defineConfig({
 		})
 	],
 	transformers: [transformerVariantGroup(), transformerDirectives()],
-	shortcuts: [[/^icon-(.*)$/, ([, c]) => `i-material-symbols-${c}`]]
+	shortcuts: [
+		// statics
+		['bg-default', 'bg-light-400 dark:bg-dark-800'],
+		['text-default', 'text-neutral-700 dark:text-neutral-300'],
+		['border-soft', 'border-neutral-300 dark:border-neutral-600'],
+		// dynamics
+		[/^icon-(.*)$/, ([, c]) => `i-material-symbols-${c}`]
+	]
 })
