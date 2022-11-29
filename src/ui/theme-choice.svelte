@@ -24,14 +24,14 @@
 	<script>
 		;(function () {
 			try {
-				var userPref = localStorage.getItem('dark-mode')
-				if (userPref) {
-					userPref = JSON.parse(userPref)
-				} else {
-					var isSystemDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-					userPref = isSystemDarkMode
+				var user_pref = localStorage.getItem('dark-mode')
+				var is_dark = user_pref
+					? JSON.parse(user_pref)
+					: window.matchMedia('(prefers-color-scheme: dark)').matches
+				if (is_dark) {
+					document.documentElement.classList.add('dark')
+					localStorage.setItem('dark-mode', 'true')
 				}
-				if (userPref) document.documentElement.classList.add('dark')
 			} catch (err) {
 				console.error('failed initialize dark mode:', err)
 			}
