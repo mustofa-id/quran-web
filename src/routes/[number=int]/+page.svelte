@@ -12,7 +12,7 @@
 
 <article class="max-w-3xl mx-auto my-4 mb-32">
 	<!-- todo: extract as component -->
-	<section class="border rounded p-4 m-4">
+	<section class="border border-soft rounded p-4 m-4">
 		<h1 class="text-xl">
 			<span>{detail.nomor}</span> &bullet;
 			<span>{detail.nama_latin}</span> &bullet;
@@ -40,17 +40,17 @@
 		<audio class="w-full" src={detail.audio} controls />
 	</section>
 
-	<section class="border rounded p-4 m-4 space-y-6">
+	<section class="border border-soft rounded p-4 m-4 space-y-6">
 		{#each detail.ayat as a, i (a)}
 			<article class="text-neutral-700 dark:text-neutral-400 space-y-2">
-				<p class="font-ayah font-semibold text-2xl leading-loose" dir="rtl">{a.ar}</p>
+				<p class="font-ayah text-4xl leading-loose" dir="rtl">{a.ar}</p>
 				<p class="text-sm italic">{a.tr}</p>
 				<p class="text-sm">{a.idn}</p>
 			</article>
 
 			<!-- todo: I forgot implement this on css way XD -->
 			{#if i !== detail.ayat.length - 1}
-				<hr />
+				<hr class="border-soft" />
 			{/if}
 		{/each}
 	</section>

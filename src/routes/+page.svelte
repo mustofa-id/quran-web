@@ -32,10 +32,9 @@
 <Seo />
 
 <article class="sm:max-w-3xl xl:max-w-6xl mx-auto my-4">
-	<section class="sticky top-2 z-1 m-2">
+	<section class="sticky top-2 z-1 m-2 bg-default">
 		<label
-			class="flex items-center space-x-2 border bg-light-200 
-			dark:bg-dark-800 focus-within:(outline outline-1) p-2"
+			class="flex items-center space-x-2 border border-soft rounded focus-within:(outline outline-1) p-2"
 		>
 			<div class="icon-search" />
 			<input
